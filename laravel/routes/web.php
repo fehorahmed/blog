@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\front\HomeController;
+use App\Http\Controllers\backend\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,6 @@ use App\Http\Controllers\front\HomeController;
 
 
 Route::get('/',[HomeController::class,'home']);
+Route::get('/admin/login',[AdminController::class,'login']);
+Route::post('/admin/login',[AdminController::class,'submitLogin'])->name('admin.login');
+Route::get('/admin/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
