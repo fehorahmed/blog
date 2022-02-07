@@ -12,9 +12,22 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
 
+{{-- <?php
+if (session('adminData')) {
+    echo "<h1>This is dffffffffffffffffffffffffffdd dffffffffffffffffffffffffffffffffff session</h1>";
+    header("Location: http://www.example.com/");
+}
 
+// header("Location: http://facebook.com");
 
+?> --}}
 
+@if(!session('adminData'))
+<script>
+    window.location.href = "/admin/login";
+</script>
+
+@endif
 
 @yield('main')
 
