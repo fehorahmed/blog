@@ -48,8 +48,8 @@
                                         <td>{{$data->id}}</td>
                                         <td>{{$data->cat_id}}</td>
                                         <td>{{$data->title}}</td>
-                                        <td><img src="{{asset('images/post/thumb/').$data->thumb}}" alt="" width="50"></td>
-                                        <td><img src="{{asset('images/post/')."/".$data->full_img}}" width="50" alt=""></td>
+                                        <td><img src="{{asset('images/post/thumb')."/".$data->thumb}}" alt="" width="50"></td>
+                                        <td><img src="{{asset('images/post')."/".$data->full_img}}" width="50" alt=""></td>
                                         <td>
                                             <a class="btn btn-info"href="{{url('admin/post/'.$data->id.'/edit')}}">Edit</a>
                                             <a class="btn btn-danger" onclick="return confirm('Are you sure you want to delete?')"href="{{url('admin/post/'.$data->id.'/delete')}}">Delete</a>
