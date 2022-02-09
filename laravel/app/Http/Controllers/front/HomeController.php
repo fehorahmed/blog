@@ -19,4 +19,10 @@ class HomeController extends Controller
         }
         return view('index',['posts'=>$post]);
     }
+
+    function postDetails($id){
+        $data= Post::find($id);
+        return view('front.post_details',['data'=>$data]);
+    }
+
 }

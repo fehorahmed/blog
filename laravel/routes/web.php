@@ -20,6 +20,11 @@ use App\Http\Controllers\backend\SettingController;
 
 
 Route::get('/',[HomeController::class,'home']);
+Route::get('/post/{id}',[HomeController::class,'postDetails'])->name('post_details');
+
+
+
+
 Route::get('/admin/login',[AdminController::class,'login']);
 Route::post('/admin/login',[AdminController::class,'submitLogin'])->name('admin.login');
 Route::get('/admin/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
