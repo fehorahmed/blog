@@ -20,11 +20,11 @@ use App\Http\Controllers\backend\SettingController;
 
 
 Route::get('/',[HomeController::class,'home']);
-Route::get('/post/{id}',[HomeController::class,'postDetails'])->name('post_details');
+Route::get('/post/{id}/{slug}',[HomeController::class,'postDetails'])->name('post_details');
 
 
 
-
+//ADMIN SECTION
 Route::get('/admin/login',[AdminController::class,'login']);
 Route::post('/admin/login',[AdminController::class,'submitLogin'])->name('admin.login');
 Route::get('/admin/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard');
@@ -39,3 +39,11 @@ Route::resource('admin/post', PostController::class);
 //Setting
 Route::get('admin/setting',[SettingController::class,'index'])->name('setting.index');
 Route::post('admin/setting',[SettingController::class,'store'])->name('admin.setting');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -57,13 +57,13 @@
                                     <div class="col-lg-6">
                                         <div class="blog-post">
                                             <div class="blog-thumb">
-                                                <a href="{{route('post_details',['id'=>$post->id])}}">
+                                                <a href="{{route('post_details',['id'=>$post->id,'slug'=>$post->title])}}">
                                                 <img src="{{ asset('images/post/thumb') . '/' . $post->thumb }}"
                                                     height="280" alt=""></a>
                                             </div>
                                             <div class="down-content">
                                                 {{-- <span>Lifestyle</span> --}}
-                                                <a href="{{route('post_details',['id'=>$post->id])}}">
+                                                <a href="{{route('post_details',['id'=>$post->id,'slug'=>$post->title])}}">
                                                     <h4>{{ $post->title }}</h4>
                                                 </a>
                                                 <ul class="post-info">
